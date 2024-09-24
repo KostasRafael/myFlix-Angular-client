@@ -1,0 +1,16 @@
+.movies-container {
+  display: flex;
+}
+
+.movie-card {
+  flex-basis: 1 1 auto;
+  justify-content: space-between;
+}
+
+.movie-image {
+  width: 200px;
+}
+
+.movie-card-title {
+  color: black;
+}

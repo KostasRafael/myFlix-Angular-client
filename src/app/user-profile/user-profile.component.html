@@ -10,7 +10,7 @@
             <mat-form-field style="margin-right: 10px;">
                 <label>Username</label>
                 <input matInput [(ngModel)]="userData.Username" placeholder="Username" type="text" name="Username"
-                    required>
+                    disabled required>
             </mat-form-field>
             <mat-form-field style="margin-right: 10px;">
                 <label>Password</label>
@@ -23,7 +23,7 @@
             </mat-form-field>
             <mat-form-field style="margin-right: 10px;">
                 <label>Birthday</label>
-                <input matInput [(ngModel)]="userData.Birthday" type="date" placeholder="Birthday" name="Birthday">
+                <input matInput [(ngModel)]="userData.Birthday" type="text" placeholder="Birthday" name="Birthday">
             </mat-form-field>
         </form>
     </mat-card-content>

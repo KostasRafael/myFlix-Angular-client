@@ -14,7 +14,7 @@ export class UserProfileComponent implements OnInit {
     public fetchApiData: FetchApiDataService,
     public router: Router
   ) {
-    this.userData = JSON.parse(localStorage.getItem("user") || "");
+   this.userData = JSON.parse(localStorage.getItem("user") || "");
   }
 
  
@@ -28,7 +28,7 @@ export class UserProfileComponent implements OnInit {
     this.fetchApiData.editUser(this.userData).subscribe((res: any) => {
       this.userData = {
         ...res,
-        id: res._id,
+        Username: this.userData.Username,
         Password: this.userData.Password,
         token: this.userData.token
       };
@@ -63,6 +63,7 @@ export class UserProfileComponent implements OnInit {
         Password: this.userData.Password,
         token: this.userData.token
       };
+      console.log("userData", this.userData);
       localStorage.setItem("user", JSON.stringify(this.userData));
       this.getfavoriteMovies();
     })
